@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Guide — GTA VI (PS5)</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: guides in plain words with sources, a roadmap to the platinum, missables flagged.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="kicker">Grand Theft Auto VI &middot; PlayStation 5 &middot; 55 trophies &middot; 1 platinum</p>
+    <h1>LEONIDA <span class="accent">TROPHY GUIDE</span></h1>
+    <p class="tagline">Every trophy, its guide and its sources — with a tracker that remembers what you earned. Works fully offline; nothing leaves this page.</p>
+    <div class="progress-wrap" aria-label="Overall progress">
+      <div class="progress-label"><span id="progressText">0 / 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+      <p class="progress-note" id="progressNote">Tick a trophy off when you earn it — progress is saved in this browser.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button id="tabChecklist" class="tab active" type="button">Checklist</button>
+  <button id="tabRoadmap" class="tab" type="button">Roadmap to Platinum</button>
+  <span class="tab-spacer"></span>
+  <span class="tab-count" id="tabCount"></span>
+</nav>
+
+<main>
+  <section id="viewChecklist" class="view" aria-label="Trophy checklist">
+    <div class="toolbar">
+      <label class="search-box">
+        <span class="sr-only">Search trophies</span>
+        <input id="searchInput" type="search" placeholder="Search a trophy or mission…" autocomplete="off">
+      </label>
+      <div class="filters" id="kindFilters" role="group" aria-label="Filter by kind">
+        <button class="chip active" data-kind="all" type="button">All</button>
+        <button class="chip" data-kind="story" type="button">Story</button>
+        <button class="chip" data-kind="missable" type="button">Missable</button>
+        <button class="chip" data-kind="collectibles" type="button">Collectibles</button>
+        <button class="chip" data-kind="activities" type="button">Activities</button>
+      </div>
+      <label class="grade-filter">
+        <span>Grade</span>
+        <select id="gradeSelect">
+          <option value="all">Any grade</option>
+          <option value="platinum">Platinum</option>
+          <option value="gold">Gold</option>
+          <option value="silver">Silver</option>
+          <option value="bronze">Bronze</option>
+        </select>
+      </label>
+      <label class="toggle">
+        <input id="spoilerToggle" type="checkbox">
+        <span class="toggle-label">Spoiler guard</span>
+      </label>
+      <div class="io-buttons">
+        <button id="exportBtn" class="btn" type="button">Export progress</button>
+        <button id="importBtn" class="btn" type="button">Import progress</button>
+        <input id="importFile" type="file" accept="application/json,.json" class="sr-only">
+      </div>
+    </div>
+    <p class="spoiler-note" id="spoilerNote" hidden>Spoiler guard is on: story trophies you have not earned yet are hidden until you earn them.</p>
+    <p class="howto">Click a trophy to read its guide and sources. Tick the box when you earn it — your progress is saved in this browser and survives a reload.</p>
+    <div class="layout">
+      <div class="list-col">
+        <ul id="trophyList" class="trophy-list"></ul>
+        <p id="emptyNote" class="empty-note" hidden>No trophies match these filters.</p>
+      </div>
+      <aside class="detail-col" id="detailPanel" aria-label="Selected trophy"></aside>
+    </div>
+  </section>
+
+  <section id="viewRoadmap" class="view hidden" aria-label="Roadmap to the platinum">
+    <div class="roadmap-intro">
+      <h2 id="roadmapTitle">Road to the Platinum</h2>
+      <p id="roadmapSubtitle"></p>
+    </div>
+    <ol id="roadmapList" class="roadmap-list"></ol>
+  </section>
+</main>
+
+<footer class="foot">
+  <p>Guide text is written for this page, in its own words. Trophy names and descriptions are shown as PlayStation publishes them. Sources are named beside each guide. No Rockstar Games logo, artwork or game footage is used here.</p>
+  <p class="foot-small">Leonida Trophy Guide — an offline, open-source fan guide. Not affiliated with Rockstar Games or Sony Interactive Entertainment.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
